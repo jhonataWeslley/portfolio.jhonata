@@ -1,0 +1,839 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+body{
+    background-color: black;
+}
+html {
+    scroll-behavior: smooth;
+}
+header {
+    position: fixed;
+}
+#imgperfil {
+    border: 2px solid red;
+    border: radius 100px;
+    width: 30rem;
+}
+h4 {
+    font-size: 55px;
+}
+h1 {
+    font-size: 30px;
+}
+
+/* #############################################  S E C T I O N 1  ############################################################# */
+/*                                                     HOME                                                                      */
+.container{
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(0, 0, 0) ;
+}
+nav{
+    display: flex;
+    width: 85%;
+    margin: auto;
+    align-items: center;
+    padding: 20px 0;
+    justify-content: space-between;
+}
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+    
+}
+nav ul li a{
+    display: inline-block;
+    text-decoration-line: none;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    transition: 0.3s;
+    animation: slidetop 0.5s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+    opacity: 0;
+
+}
+nav ul li a:hover{
+    color: rgba(218, 0, 0, 0.84);
+    transform: scale(3);
+}
+#home {
+    color: rgba(218, 0, 0, 0.84);
+}
+
+/* ######################################################    PORTFOLIO    ########################################################## */
+
+.logo{
+    color: rgb(255, 255, 255) ;
+    font-size: 40px;
+    animation: slideright 1s ease forwards;
+}
+.blue{
+    color: rgba(218, 0, 0, 0.84);
+    font-size: 25px;
+}
+span{
+    color: rgba(218, 0, 0, 0.84);
+}
+
+/* #####################################################    BUTTON FOLOW    ######################################################## */
+
+.Follow{
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    padding: 10px 30px;
+    border: 2px solid rgba(218, 0, 0, 0.84);
+    border-radius: 30px;
+    transition: 0.5s ease;
+    opacity: 0;
+    animation: slideleft 1s ease forwards;
+    animation-delay: 2s;
+
+}
+.Follow:hover{
+    background:rgba(218, 0, 0, 0.84);
+    color: black;
+    box-shadow: 0 0 20px rgba(218, 0, 0, 0.84);
+}
+
+/* ##################################################    CONTENT    #################################################################### */
+
+.content{
+    text-align: center;
+    margin: 8%;
+}
+.content .img img{
+    width: 530px;
+    opacity: 0;
+    animation: zoomin 1s ease forwards, floatimage 4s ease-in-out infinite;
+    animation-delay: 1s, 3s;
+    filter: drop-shadow(0px 7px 10px rgba(218, 0, 0, 0.84));
+    border-radius: 30%;
+}
+.content .text{
+    width: 100%;
+    line-height:65px;
+    color: white;
+}
+.content .text h4{
+    font-size: 35px;
+    letter-spacing: 2px;
+    opacity: 0;
+    animation: slidebottom 1s ease forwards;
+    animation-delay: 0.7s;
+}
+.content .text h1{
+    font-size: 100px;
+    letter-spacing: 1px;
+    opacity: 0;
+    animation: slideright 1s ease forwards;
+    animation-delay: 1s;
+}
+.content .text h3{
+    font-size: 25px;
+    letter-spacing: 1px;
+    animation: slidetop 1s ease forwards;
+    animation-delay: 0.7s;
+    opacity: 0;
+}
+.social-media{
+    text-align: center;
+}
+.social-media a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid rgba(218, 0, 0, 0.84);
+    border-radius: 50%;
+    font-size: 20px;
+    color: rgba(218, 0, 0, 0.84);
+    text-decoration: none;
+    margin: 30px 0px 30px 0px;
+    transition: 0.5s ease-in-out;
+    transition: 0.5s;
+    opacity: 0;
+    animation: slideleft 0.5s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+}
+.social-media a:hover{
+background: rgba(218, 0, 0, 0.84);
+color: black;
+box-shadow: 0 0 20px rgba(218, 0, 0, 0.84);
+}
+.cv
+{
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    padding: 10px 30px;
+    border: 2px solid rgba(218, 0, 0, 0.84);
+    border-radius: 30px;
+    transition: 0.5s ease;
+    opacity: 0;
+    animation: slidetop 1s ease forwards;
+    animation-delay: 2s;
+    text-align: center;
+}
+.cv:hover{
+    background: rgba(218, 0, 0, 0.84);
+    color: black; 
+    box-shadow: 0 0 20px rgba(218, 0, 0, 0.84);
+}
+.content .img{
+    width: 45%;
+    height: 80%;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+}
+/*#######################################################     keyframes animation     ################################################*/
+@keyframes slideright {
+    0%{
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes slidetop {
+    0%{
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes slidebottom {
+    0%{
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes slideleft {
+    0%{
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes zoomin {
+    0%{
+        transform: scale(0);
+        opacity: 0;
+    }
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+@keyframes floatimage {
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-24px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+/* #######################################################  S E C T I O N 2  ########################################################## */
+/*                                                             about me                                                                 */
+#im2 {
+    border-radius: 50px;
+    margin-bottom: 10px;
+} 
+#im3 {
+    width: 25rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    text-align: center;
+    opacity: 0;
+    animation: slidetop 1s ease forwards;
+    animation-delay: 6s;
+    margin-left: 75px;
+    margin-top: 20px;
+    transition: all 0.3s ease; /* suaviza as transições */
+}
+#im3:hover {
+  background-color: #ec000071; /* muda cor ao passar o mouse */
+  border-radius: 100px;
+}
+
+
+.ABOUTME{
+    width: 80%;
+    padding: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    transition: 0.5s ease;
+}
+
+.img2 img{
+    width: 25rem;
+    transition: 0.5s ease;
+    opacity: 0;
+    animation: slideleft 1s ease forwards;
+    animation-delay: 4s;
+    margin-right: 40px;
+    margin-left: 20px;
+    border: 6px solid #ec00008f;
+    border-radius: 20px;
+
+}
+.text2 h2{
+    color: #fff;
+    font-size: 55px;
+    flex-direction: column;
+    transition: 0.5s ease;
+    opacity: 0;
+    animation: slideright 1s ease forwards;
+    animation-delay: 4s;
+}
+.text2{
+    color: #fff;
+    font-size:22px;
+    text-align: justify;
+    transition: 0.5s ease;
+    opacity: 0;
+    animation: slideright 1s ease forwards;
+    animation-delay: 4s;
+    margin-right: 30px;
+}
+/* ######################################################  S E C T I O N 3  ########################################################## */
+
+.heading{
+    text-align: center;
+    color: #fff;
+    font-size: 50px;
+    opacity: 0;
+    animation: slidetop 1s ease forwards;
+    animation-delay: 6s;
+}
+
+.projects-content{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    text-align: center;
+    animation: slidetop 1s ease forwards;
+    animation-delay: 6s;
+}
+
+.col{
+    position: relative;
+}
+
+.col img{
+    width: 40rem;
+    border-radius: 12px;
+    height: auto;
+    padding: 20px;
+    opacity: 0;
+    animation: slidetop 1s ease forwards;
+    animation-delay: 6s;
+} 
+
+.boxes{
+    display: grid;
+    grid-template-columns: repeat(4,300px);
+    align-content: space-around;
+    column-gap: 30px;
+    background-color: rgba(230, 3, 255, 0.429);
+    width: 300px;
+    margin-top: 200px;
+    color: #fff;
+    
+}
+/* ######################################################  S E C T I O N 4  ########################################################## */
+
+.title{
+    margin-top: 200px;
+    text-align: center;
+    color: #fff;
+    font-size: 50px;
+    opacity: 0;
+    animation: slidetop 1s ease forwards;
+    animation-delay: 9s;
+}
+.size{
+    width: 70px;
+}
+.all-icons{
+    display: flex;
+    padding: 100px;
+    grid-template-columns:repeat(3,auto);
+    align-items: center;
+    column-gap: 30px;
+    opacity: 0;
+    animation: slidetop 1s ease forwards;
+    animation-delay: 9s;
+}
+.icons-skills{
+    background-color: rgb(0, 0, 0);
+    width: 100vh;
+    height: 20em;
+    border-radius: 30px;
+    align-items: center;
+    padding: 30px;
+    border: solid rgb(198, 0, 0) 3px;
+}
+.style{
+    color: #fff;
+    font-weight: bold;
+}
+h3 {
+    text-align: center;
+}
+#pproj {
+    text-align: center;
+    margin-top: 20px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+/* عرض الشاشه 600 او اقل */
+@media screen and (max-width: 600px) {
+   /* .content .img img{
+        width: 200px;
+    } */
+    .logo{
+        font-size: 20px;
+        padding-top: 10px;
+        padding-left: 5%;
+    }
+    nav{
+        display: grid;
+        gap: 3px;
+        width: 100%;
+        font-size:10px ;
+    }
+    .Follow{
+        width: 12%;
+        margin-left: 40px;
+        margin-top: 40px;
+    }
+    .content .text h4{
+        font-size: 25px;
+    }
+    .content .text h1{
+        font-size: 55px;
+    }
+    .content .text h3{
+        font-size: 15px;
+    }
+    .content .img img{
+        padding-top: 45%;
+        width: 230px;
+    }
+    .social-media{
+        margin-left: 35px;
+    }
+    .social-media a{
+        width: 25px;
+        height: 25px;
+        font-size: 15px;
+    }
+    .cv{
+        margin-left: 40px;
+        padding: 10px 20px;
+        font-size: 10px;
+    }
+    .ABOUTME{
+        width: 100%;
+        padding: 50px;
+        display: grid;
+        align-items: center;
+        justify-content: space-around;
+    }
+    
+    .img2 img{
+        width: 300px;
+    }
+    .text2 h2{
+        font-size: 25px;
+    }
+    .text2{
+        color: #fff;
+        font-size:10px;
+        width: 80%;
+    }
+    .title{
+        font-size: 25px;
+    }
+    .size{
+        width: 40px;
+    }
+    .all-icons{
+        display: block;
+        padding: 100px;
+        width: 80%;
+    }
+    .icons-skills{
+        padding-top: 30px;
+        background-color: rgb(0, 0, 0);
+        width: 50vh;
+        justify-content: center;
+        height: 10em;
+        border-radius: 30px;
+        align-items: center;
+        padding: 30px;
+        border: solid rgba(218, 0, 0, 0.84) 3px;
+    }
+    .style{
+        font-size: 10px;
+    }
+}
+  /* عرض الشاشة بين 601 بكسل و 900 بكسل */
+  @media screen and (min-width: 601px) and (max-width: 900px) {
+    .logo{
+        font-size: 40px;
+        padding-left: 2%;
+    }
+    nav{
+        display: grid;
+        justify-content: space-between;
+        width: 100%;
+        margin-top: 20px;
+        font-size:18px ;
+    }
+    .Follow{
+        font-size: 15px;
+        width: 12%;
+        margin-left: 40px;
+        margin-top: 40px;
+    }
+    .content .text h4{
+        font-size: 20px;
+    }
+    .content .text h1{
+        font-size: 45px;
+    }
+    .content .text h3{
+        font-size: 20px;
+    }
+    .content .img img{
+        padding-top: 40%;
+        width: 290px;
+    }
+    .social-media{
+        margin-left: 8%;
+    }
+    .social-media a{
+        width: 25px;
+        height: 25px;
+        font-size: 15px;
+    }
+    .cv{
+        margin-left:8%;
+        padding: 10px 20px;
+        font-size: 10px;
+    }
+    .content{
+        margin-left: 8% ;
+        margin-top: 0%;
+    }
+ } 
+ @media screen and (min-width: 900px) and (max-width: 1100px) {
+    .content .img img{
+        width: 400px;
+        margin-top: 10%;
+        margin-left: 10% ;
+    } 
+ }
+ 
+ /* ---------------------------------------- PÁGINA CONTEÚDO PARA INSTAGRAM --------------------------------------------------- */
+#h1Insta {
+    color: #fff;
+    font-size: 55px;
+    text-align: center;
+    margin-top: 50px;
+    transition: 0.5s ease;
+    animation: slideright 1s ease forwards;
+    animation-delay: 4s;
+}
+
+ /* --------------------------------------------------- IDENTIDADE VISUAL ----------------------------------------------------- */
+
+
+ /* ----------------------------------------------- DESIGN DE LOGOTIPO -------------------------------------------------------- */
+
+
+ /* -------------------------------------------------------- FORÇA VITAL ------------------------------------------------------ */
+#forcavitalimage {
+    display: block;
+    width: 70rem;
+    transition: 0.5s ease;
+    opacity: 0;
+    animation: slideleft 1s ease forwards;
+    animation-delay: 4s;
+    margin-left: 80px;
+    border: 6px solid #ec00008f;
+    border-radius: 20px;
+    margin-top: 30px;
+    text-align: center;
+}
+#subtituloForca {
+    font-size: 40px;
+    text-align: center;
+    margin-top: 150px;
+}
+#paragForca {
+text-align: center;
+}
+ /* ------------------------------------------------------ IR NA PRATICA ------------------------------------------------------ */
+
+
+ /* ---------------------------------------------------- CR7 ------------------------------------------------------------------- */
+.videocr {
+  position: relative;
+  width: 70rem;          /* Largura do vídeo no site */    /* Limite pra não ficar gigante em telas grandes */
+  margin: 40px auto;   /* Centraliza na página e adiciona espaço em volta */
+  border-radius: 15px; /* Cantos arredondados */
+  overflow: hidden;    /* Garante que o vídeo fique dentro do contêiner */
+  box-shadow: 0 6px 20px rgba(255, 0, 0, 0.726); /* Sombra suave */
+  transition: 0.5s ease;
+    opacity: 0;
+    animation: slideleft 1s ease forwards;
+    animation-delay: 4s;
+}
+
+.videocr {
+  width: 70rem;          /* Faz o vídeo ocupar todo o contêiner */
+  height: auto;         /* Mantém a proporção */
+  display: block;       /* Remove espaçamento estranho */
+  border: none;         /* Remove bordas */
+}
+
+ /* ----------------------------------------------------- PAGINA DE CADASTRO --------------------------------------------------- */
+
+
+ /* ------------------------------------------------- FLOW FITNEES ------------------------------------------------------------- */
+
+
+ /* ------------------------------------------------- RUN STREET --------------------------------------------------------------- */
+
+ /* ===========================
+   MOBILE FIRST – até 768px
+=========================== */
+@media screen and (max-width: 768px) {
+
+  body {
+    overflow-x: hidden;
+  }
+
+  header {
+    position: relative;
+  }
+
+  nav {
+    display: none;
+  }
+
+  nav ul {
+    padding: 0;
+  }
+
+  nav ul li {
+    display: block;
+    margin: 8px 0;
+  }
+
+  nav ul li a:hover {
+    transform: scale(1.1);
+  }
+
+  .logo {
+    font-size: 24px;
+  }
+
+  /* HOME */
+  .content {
+    margin-top: 65px;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .content .text {
+    line-height: 1.4;
+  }
+
+  .content .text h4 {
+    font-size: 18px;
+  }
+
+  .content .text h1 {
+    font-size: 32px;
+  }
+
+  .content .text h3 {
+    font-size: 16px;
+  }
+
+  .content .img {
+    position: relative;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .content .img img {
+    width: 220px;
+    padding: 0;
+  }
+
+  .Follow,
+  .cv {
+    display: inline-block;
+    text-align: center;
+    margin: 5px;
+    font-size: 18px;
+  }
+
+  .social-media {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 12px;
+}
+
+  .social-media a {
+      margin: 0;
+  flex-shrink: 0;
+  }
+
+  /* ABOUT ME */
+  .ABOUTME {
+    width: 100%;
+    padding: 30px 15px;
+    display: flex;
+    margin-right: 40px;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .img2 img {
+    width: 18rem;
+    margin-top: 5px;
+    margin-right: 30px;
+    margin-left: 20px;
+  }
+
+  .text2 h2 {
+    text-align: center;
+  width: 100%;
+  margin: 0 auto 20px auto;
+  }
+
+  .text2 {
+    font-size: 18px;
+    text-align: justify;
+    margin: 0;
+    margin-top: 30px;
+  }
+
+  .text2 h2 {
+    text-align: center;
+  width: 100%;
+  margin: 0 auto 20px auto;
+  }
+
+
+
+  /* PROJECTS */
+.heading h3 {
+    font-size: 30px;
+    margin-top: 25px;
+}
+
+  .heading {
+    font-size: 30px;
+  }
+
+  .projects-content {
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  }
+
+  #im3 {
+    margin-right: 50px;
+  }
+
+  .col {
+  display: flex;
+  justify-content: center;
+}
+
+  .col img {
+    width: 100%;
+  max-width: 600px;
+  height: auto;
+  padding: 0;
+  margin: 0 auto;
+  display: block;
+  }
+
+  /* SKILLS */
+  .title {
+    font-size: 30px;
+    margin-top: 80px;
+  }
+
+  .all-icons {
+    padding: 20px;
+    flex-direction: column;
+  }
+
+  .icons-skills {
+    width: 100%;
+    height: auto;
+  }
+
+  .style {
+    font-size: 12px;
+  }
+
+  /* IMAGENS GRANDES */
+  #forcavitalimage,
+  .videocr {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  #subtituloForca {
+    font-size: 24px;
+    margin-top: 60px;
+    text-align: center;
+    margin-left: 50px;
+  }
+
+  #paragForca {
+    text-align: center;
+    margin-left: 50px;
+  }
+}
